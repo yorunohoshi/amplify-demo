@@ -1,5 +1,10 @@
 import { createApp } from 'vue'
 import { createPinia } from 'pinia'
+import { Amplify } from "aws-amplify"
+import outputs from "../amplify_outputs.json"
+
+// amplify
+Amplify.configure(outputs)
 
 import App from './App.vue'
 import router from './router'
