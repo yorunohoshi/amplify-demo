@@ -1,11 +1,10 @@
 import { type ClientSchema, a, defineData } from '@aws-amplify/backend';
-import { sayHello } from '../functions/say-hello/resource';
 
 const schema = a.schema({
   User: a
     .model({
       name: a.string(),
-      age: a.int()
+      age: a.string()
     })
     .authorization(allow => [allow.publicApiKey()])
 });
